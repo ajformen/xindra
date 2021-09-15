@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nix_shopping_app/controllers/controllers.dart';
 import 'package:nix_shopping_app/models/product_model.dart';
 import 'package:nix_shopping_app/widget/custom_text.dart';
 // import 'package:untitled/constants/controllers.dart';
@@ -68,7 +69,7 @@ class SingleProductWidget extends StatelessWidget {
                   icon: Icon(Icons.add_shopping_cart),
                   color: Colors.green[800],
                   onPressed: () {
-                    // cartController.addProductToCart(product);
+                    cartController.addProductToCart(product);
                   })
             ],
           ),

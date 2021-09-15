@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 // import 'package:nix_shopping_app/widget/sign_up_widget.dart';
 import 'package:nix_shopping_app/bindings/home_binding.dart';
+import 'package:nix_shopping_app/controllers/cart_controller.dart';
 import 'package:nix_shopping_app/controllers/product_controller.dart';
+import 'package:nix_shopping_app/controllers/user_controller.dart';
 import 'package:nix_shopping_app/routes/app_pages.dart';
 
 import 'constants/firebase.dart';
@@ -28,6 +30,8 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await initialization.then((value) {
     Get.put(ProductController());
+    Get.put(CartController());
+    Get.put(UserController());
   });
   HomeBinding().dependencies();
   runApp(MyApp());
