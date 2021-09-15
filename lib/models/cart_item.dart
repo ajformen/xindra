@@ -15,13 +15,14 @@ class CartItemModel {
   String? productId;
   double? price;
 
-  CartItemModel(
-      {this.productId,
-      this.id,
-      this.image,
-      this.name,
-      this.quantity,
-      this.cost});
+  CartItemModel({
+    this.productId,
+    this.id,
+    this.image,
+    this.name,
+    this.quantity,
+    this.cost,
+  });
 
   CartItemModel.fromMap(Map<String, dynamic> data) {
     id = data[ID];
@@ -40,6 +41,6 @@ class CartItemModel {
         NAME: name,
         QUANTITY: quantity,
         COST: price! * quantity!,
-        PRICE: price
+        PRICE: price,
       };
 }
