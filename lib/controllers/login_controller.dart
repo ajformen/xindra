@@ -6,6 +6,7 @@ import 'package:nix_shopping_app/customFullScreenDialog.dart';
 
 class LoginController extends GetxController {
   HomeController homeController = Get.find<HomeController>();
+
   @override
   void onInit() async {
     super.onInit();
